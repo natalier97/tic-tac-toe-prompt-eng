@@ -1,32 +1,4 @@
 
-
-# X = 'x'
-# O = 'o'
-# EMPTY = ' '
-
-# board = [print('\n'),
-#     [X, 0, EMPTY],
-#     print('\n'),
-#     [],
-#     print('\n'),
-#     []
-# ]
-
-# print(board)
-
-
-# board = [' ' for _ in range(9)]
-
-# # Function to print the Tic-Tac-Toe board
-# def print_board(board):
-#     print(f'{board[0]} | {board[1]} | {board[2]}')
-#     print('-' * 9)
-#     print(f'{board[3]} | {board[4]} | {board[5]}')
-#     print('-' * 9)
-#     print(f'{board[6]} | {board[7]} | {board[8]}')
-
-# print(print_board(board))
-
 import random
 from rich import print
 from rich.markup import escape
@@ -38,14 +10,6 @@ console = Console()
 # Initialize the Tic-Tac-Toe board as a list of empty cells
 board = [' ' for _ in range(9)]
 cat_emoji = Emoji("cat")
-
-# Function to print the Tic-Tac-Toe board
-# def print_board(board):
-#     table = "|[bold] 1 | 2 | 3 [/bold]|\n|[bold] 4 | 5 | 6 [/bold]|\n|[bold] 7 | 8 | 9 [/bold]|"
-#     for row in board:
-#         for cell in row:
-#             table = table.replace(str(cell), f"[bold]{escape(cell)}[/bold]")
-#     console.print(f"\n{table}\n")
 
 # Function to print the Tic-Tac-Toe board
 def print_board(board):
@@ -146,52 +110,5 @@ def main():
 
 
 
-    # while True:
-    #     print_board(board)
-
-    #     if player_turn:
-    #         move = get_human_move(board)
-    #         board[move] = player_symbol
-    #     else:
-    #         computer_move = computer_random_move(board)
-    #         if computer_move is not None:
-    #             board[computer_move] = computer_symbol
-    #         else:
-    #             print(f"CAT game{cat_emoji}")
-    #             break
-
-
-
-    # while True:
-    #         print_board(board)
-
-    #         if player_turn:
-    #             move = get_human_move(board)
-    #             board[move // 3][move % 3] = player_symbol
-    #         else:
-    #             computer_move = computer_random_move(board)
-    #             if computer_move is not None:
-    #                 board[computer_move // 3][computer_move % 3] = computer_symbol
-    #             else:
-    #                 print("It's a draw!")
-    #                 break
-
-    #         # Check for a win condition
-    #         if check_win(board, player_symbol):
-    #             print_board(board)
-    #             print("Congratulations! You win!")
-    #             break
-    #         elif check_win(board, computer_symbol):
-    #             print_board(board)
-    #             print("Computer wins! You lose.")
-    #             break
-
-    #         # Check for a draw condition
-    #         if all(cell != ' ' for row in board for cell in row):
-    #             print_board(board)
-    #             print(f"CAT game{cat_emoji}")
-    #             break
-
-    #         # Switch turns
-    #         player_turn = not player_turn
+   
 print(main())
